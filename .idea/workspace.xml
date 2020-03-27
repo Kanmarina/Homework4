@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="880b688c-e93d-4781-b03f-f3eae1412f02" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zij34A8DIieaq6S6AlLZqtBz2C" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="TestNG.Homework4.validLinks">
+    <configuration name="Homework4.departSort" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Homework4" />
+      <option name="METHOD_NAME" value="departSort" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework4.links" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Homework4" />
+      <option name="METHOD_NAME" value="links" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework4.main_departments" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Homework4" />
+      <option name="METHOD_NAME" value="main_departments" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework4.validLinks" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Homework4" />
+      <option name="METHOD_NAME" value="validLinks" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework4.yearsMonthsDays" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Homework4" />
+      <option name="METHOD_NAME" value="yearsMonthsDays" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Homework4.validLinks" />
+        <item itemvalue="TestNG.Homework4.links" />
+        <item itemvalue="TestNG.Homework4.main_departments" />
+        <item itemvalue="TestNG.Homework4.departSort" />
+        <item itemvalue="TestNG.Homework4.yearsMonthsDays" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="880b688c-e93d-4781-b03f-f3eae1412f02" name="Default Changelist" comment="" />
+      <created>1585328605464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585328605464</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="35" key="GridCell.Tab.0.bottom" timestamp="1585338423812">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="35" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1585338423812" />
+    <state width="1237" height="35" key="GridCell.Tab.0.center" timestamp="1585338423812">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="35" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1585338423812" />
+    <state width="1237" height="35" key="GridCell.Tab.0.left" timestamp="1585338423812">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="35" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1585338423812" />
+    <state width="1237" height="35" key="GridCell.Tab.0.right" timestamp="1585338423812">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="35" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1585338423812" />
+    <state x="91" y="53" key="new project wizard" timestamp="1585328806839">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="91" y="53" key="new project wizard/0.0.1280.689@0.0.1280.689" timestamp="1585328806839" />
+  </component>
+</project>
