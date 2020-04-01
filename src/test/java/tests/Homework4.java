@@ -19,7 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class Homework4 {
+public class
+Homework4 {
     protected static WebDriver driver;
 
     @BeforeMethod
@@ -233,22 +234,72 @@ public class Homework4 {
 //8. verify button "Add to Cart" is visible
 
     @Test
-    public void cart(){
+    public void cart() {
         driver.get("https://amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("wooden spoon");
         driver.findElement(By.xpath("//span[@id='nav-search-submit-text']/following-sibling::input")).click();
         List<WebElement> price = driver.findElements(By.xpath("//span[@class='a-price']/span[@class='a-offscreen']"));
         int x = new Random().nextInt(price.size());
-        x = x==0?1:x;
-        String originName = driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])["+x+"]")).getText();
+        x = x == 0 ? 1 : x;
+        String originName = driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[" + x + "]")).getText();
         String originPrice = "$" +
-                driver.findElement(By.xpath("(//span[@class='a-price']/span[2]/span[2])["+x+"]")).getText() +"."+
-                driver.findElement(By.xpath("(//span[@class='a-price']/span[2]/span[3])["+x+"]")).getText();
-        driver.findElement(By.xpath("(//span[@class='a-price-fraction'])["+x+"]")).click();
+                driver.findElement(By.xpath("(//span[@class='a-price']/span[2]/span[2])[" + x + "]")).getText() + "." +
+                driver.findElement(By.xpath("(//span[@class='a-price']/span[2]/span[3])[" + x + "]")).getText();
+        driver.findElement(By.xpath("(//span[@class='a-price-fraction'])[" + x + "]")).click();
         Assert.assertEquals(driver.findElement(By.xpath("//span[text()='Qty:']/following-sibling::span")).getText(), "1");
         Assert.assertEquals(driver.findElement(By.id("productTitle")).getText(), originName);
         Assert.assertEquals(driver.findElement(By.id("price_inside_buybox")).getText(), originPrice);
         Assert.assertTrue(driver.findElement(By.id("add-to-cart-button")).isDisplayed());
+
+        /*
+
+          @Test
+    public void test() {
+        driver.get("https://amazon.com");
+
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("wooden spoon", Keys.ENTER);
+        BrowserUtils.wait(3);
+        List<WebElement> items = driver.findElements(By.cssSelector("[class='sg-col-inner']"));
+
+        items.removeIf(p -> p.findElements(By.cssSelector("[aria-label='Amazon Prime']")).isEmpty()); // remove all non-prime items
+        List<WebElement> prices = items.stream().map(p -> p.findElement(By.cssSelector("[class='a-price'] > [aria-hidden='true']"))).collect(Collectors.toList());
+        List<WebElement> descriptions = items.stream().map(p -> p.findElement(By.cssSelector("[class='a-size-base-plus a-color-base a-text-normal']"))).collect(Collectors.toList());
+        System.out.println("Number of prices: " + prices.size());
+        System.out.println("Number of descriptions: " + descriptions.size());
+        Random random = new Random();
+        int randomNumber = random.nextInt(descriptions.size());
+        prices.removeIf(p -> !p.isDisplayed()); //remove invisible items
+        descriptions.removeIf(p -> !p.isDisplayed()); //remove invisible items
+
+        //replace new line with .
+        List<String> parsedPrices = BrowserUtils.getTextFromWebElements(prices).parallelStream().map(p -> p.replace("\n", ".")).collect(Collectors.toList());
+        List<String> parsedDescriptions = BrowserUtils.getTextFromWebElements(prices);
+        parsedDescriptions.removeIf(String::isEmpty);
+        String expectedPrice = parsedPrices.get(randomNumber);
+        WebElement randomItem = descriptions.get(randomNumber);
+        String expectedDescription = randomItem.getText().trim();
+        System.out.println("Prices: " + parsedPrices);
+        System.out.println("Descriptions: " + BrowserUtils.getTextFromWebElements(descriptions));
+        randomItem.click();//click on random item
+        WebElement quantity = driver.findElement(By.xpath("//span[text()='Qty:']/following-sibling::span"));
+        int actual = Integer.parseInt(quantity.getText().trim());
+        Assert.assertEquals(actual, 1);
+        WebElement productTitle = driver.findElement(By.id("productTitle"));
+        WebElement productPrice = driver.findElement(By.cssSelector("[id='priceInsideBuyBox_feature_div'] > div"));
+        String actualDescription = productTitle.getText().trim();
+        String actualPrice = productPrice.getText().trim();
+        Assert.assertEquals(actualDescription, expectedDescription);
+        Assert.assertEquals(actualPrice, expectedPrice);
+        driver.quit();
+    }
+
+    //close browser if fails
+    static {
+        Runtime.getRuntime().addShutdownHook(new Thread(Driver::closeDriver));
+    }
+}
+
+         */
     }
 
 //    PRIME
@@ -262,11 +313,11 @@ public class Homework4 {
 //8. verify that name first result that has prime label is different
 
     @Test
-    public void prime(){
+    public void prime() {
         driver.get("https://amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("wooden spoon");
         driver.findElement(By.xpath("//span[@id='nav-search-submit-text']/following-sibling::input")).click();
-        WebElement firstPrimeName =driver.findElement(By.xpath("(//i[@aria-label='Amazon Prime']/../../../../../..//h2)[1]"));
+        WebElement firstPrimeName = driver.findElement(By.xpath("(//i[@aria-label='Amazon Prime']/../../../../../..//h2)[1]"));
         String name1 = firstPrimeName.getText();
         driver.findElement(By.xpath("//i[@class='a-icon a-icon-prime a-icon-medium']/../div/label/i")).click();
         String name2 = driver.findElement(By.xpath("(//i[@aria-label='Amazon Prime']/../../../../../..//h2)[1]")).getText();
@@ -283,12 +334,30 @@ public class Homework4 {
 //5. verify that same Brand names are still displayed
 
 
-
-    }
-
-
 //CHEAP SPOONS
 //1. go to https://amazon.com
 //2. search for "wooden spoon"
 //3. click on Price option Under $25 on the left
 //4. verify that all results are cheaper than $25
+//
+//@Test
+//    public  void cheapSpoon() {
+//    driver.get("https://amazon.com");
+//    driver.findElement(By.id("twotabsearchtextbox")).sendKeys("wooden spoon", Keys.ENTER);
+//    driver.findElement(By.linkText("Under $25")).click();
+//
+//    //we collect only dollar values from the price of every item
+//    List<WebElement> prices = driver.findElements(By.className("a-price-whole"));
+    //we convert collection of web elements into collection of strings
+  //  List<String> pricesText =  Br.getTextFromWebElements(prices);
+  //  System.out.println(pricesText);
+  //  for (String price : pricesText) {
+
+        //we convert every price as a string into integer
+   //     int priceConverted = Integer.parseInt(price);
+
+        //checking if the price of every item is under 25
+     //   Assert.assertTrue(priceConverted < 25);
+    }
+   // driver.quit();
+
